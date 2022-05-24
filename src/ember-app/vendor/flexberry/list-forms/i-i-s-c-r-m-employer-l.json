@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-c-r-m-employer-e",
+  "editForm": "i-i-s-c-r-m-employer-e",
+  "external": false,
+  "caption": "Employer",
+  "name": "IISCRMEmployerL",
+  "className": "EmployerL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-employer",
+      "modelProjection": "EmployerL"
+    }
+  ]
+}

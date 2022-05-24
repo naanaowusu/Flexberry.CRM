@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-c-r-m-administrator-e",
+  "editForm": "i-i-s-c-r-m-administrator-e",
+  "external": false,
+  "caption": "Administrator",
+  "name": "IISCRMAdministratorL",
+  "className": "AdministratorL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-administrator",
+      "modelProjection": "AdministratorL"
+    }
+  ]
+}

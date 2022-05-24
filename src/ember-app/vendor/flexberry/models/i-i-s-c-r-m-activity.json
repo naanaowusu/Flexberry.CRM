@@ -1,0 +1,218 @@
+﻿{
+  "name": "IISCRMActivity",
+  "modelName": "i-i-s-c-r-m-activity",
+  "className": "Activity",
+  "nameSpace": "IIS.CRM",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "activityName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "activityType",
+      "type": "i-i-s-c-r-m-t-activity",
+      "flexberryType": "tActivity",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "startOfActivity",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "endOfActivity",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "contact",
+      "relatedTo": "i-i-s-c-r-m-contact",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "lead",
+      "relatedTo": "i-i-s-c-r-m-lead",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ActivityE",
+      "modelName": "i-i-s-c-r-m-activity",
+      "attrs": [
+        {
+          "name": "activityName",
+          "caption": "Activity name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "activityType",
+          "caption": "Activity type",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "startOfActivity",
+          "caption": "Start of activity",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "endOfActivity",
+          "caption": "End of activity",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Contact",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 5
+            }
+          ],
+          "index": 4,
+          "type": "standard",
+          "caption": "Contact",
+          "name": "contact",
+          "relatedTo": "i-i-s-c-r-m-contact",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Lead",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "type": "standard",
+          "caption": "Lead",
+          "name": "lead",
+          "relatedTo": "i-i-s-c-r-m-lead",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ActivityL",
+      "modelName": "i-i-s-c-r-m-activity",
+      "attrs": [
+        {
+          "name": "activityName",
+          "caption": "Activity name",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "activityType",
+          "caption": "Activity type",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "startOfActivity",
+          "caption": "Start of activity",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "endOfActivity",
+          "caption": "End of activity",
+          "hidden": false,
+          "index": 3
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Contact",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "contact",
+          "relatedTo": "i-i-s-c-r-m-contact",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Lead",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Name",
+          "name": "lead",
+          "relatedTo": "i-i-s-c-r-m-lead",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

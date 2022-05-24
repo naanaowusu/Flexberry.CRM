@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-c-r-m-activity-e",
+  "editForm": "i-i-s-c-r-m-activity-e",
+  "external": false,
+  "caption": "Activity",
+  "name": "IISCRMActivityL",
+  "className": "ActivityL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-activity",
+      "modelProjection": "ActivityL"
+    }
+  ]
+}

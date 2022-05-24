@@ -1,0 +1,105 @@
+<h3 class="ui header">{{t "forms.i-i-s-c-r-m-activity-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.activityName
+      class=(if (v-get validationModel "activityName" "isInvalid") "error")
+      label=(t "forms.i-i-s-c-r-m-activity-e.activityName-caption")
+      data-test-i-i-s-c-r-m-activity-e-activityName=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "activityName" "message")}}
+  </div>
+  <div class="field" data-test-i-i-s-c-r-m-activity-e-activityType="true">
+    <label>{{t "forms.i-i-s-c-r-m-activity-e.activityType-caption"}}</label>
+    {{flexberry-dropdown
+      items=(flexberry-enum "i-i-s-c-r-m-t-activity")
+      value=model.activityType
+      class=(if (v-get validationModel "activityType" "isInvalid") "error")
+      readonly=readonly
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "activityType" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-c-r-m-activity-e.startOfActivity-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.startOfActivity
+      class=(if (v-get validationModel "startOfActivity" "isInvalid") "error")
+      data-test-i-i-s-c-r-m-activity-e-startOfActivity=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "startOfActivity" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-c-r-m-activity-e.endOfActivity-caption"}}</label>
+    {{flexberry-simpledatetime
+      type="date"
+      readonly=readonly
+      value=model.endOfActivity
+      class=(if (v-get validationModel "endOfActivity" "isInvalid") "error")
+      data-test-i-i-s-c-r-m-activity-e-endOfActivity=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "endOfActivity" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-c-r-m-activity-e.contact-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.contact
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="contact"
+      projection="ContactL"
+      title=(t "forms.i-i-s-c-r-m-activity-e.contact-caption")
+      readonly=readonly
+      componentName="contactLookup"
+      class=(if (v-get validationModel "contact" "isInvalid") "error")
+      data-test-i-i-s-c-r-m-activity-e-contact=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "contact" "message")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-c-r-m-activity-e.lead-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.lead
+      displayAttributeName="name"
+      autocomplete=true
+      relationName="lead"
+      projection="LeadL"
+      title=(t "forms.i-i-s-c-r-m-activity-e.lead-caption")
+      readonly=readonly
+      componentName="leadLookup"
+      class=(if (v-get validationModel "lead" "isInvalid") "error")
+      data-test-i-i-s-c-r-m-activity-e-lead=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationModel "lead" "message")}}
+  </div>
+</form>

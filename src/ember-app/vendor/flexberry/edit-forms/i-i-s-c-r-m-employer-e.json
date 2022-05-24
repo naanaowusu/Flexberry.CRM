@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Administrator",
+      "projection": "AdministratorL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Employer",
+  "name": "IISCRMEmployerE",
+  "className": "EmployerE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-employer",
+      "modelProjection": "EmployerE"
+    }
+  ]
+}

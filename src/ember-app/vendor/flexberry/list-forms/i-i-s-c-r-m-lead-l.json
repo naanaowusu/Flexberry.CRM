@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-c-r-m-lead-e",
+  "editForm": "i-i-s-c-r-m-lead-e",
+  "external": false,
+  "caption": "Lead",
+  "name": "IISCRMLeadL",
+  "className": "LeadL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-lead",
+      "modelProjection": "LeadL"
+    }
+  ]
+}

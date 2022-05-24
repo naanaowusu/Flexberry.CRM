@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "IIS.CRM",
+  "className": "tGender",
+  "enumObjects": {
+    "Female": "Female",
+    "Male": "Male"
+  }
+}

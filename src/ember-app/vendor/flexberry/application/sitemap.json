@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "CRM",
+  "applicationTitle": "CRM",
+  "items": [
+    {
+      "link": null,
+      "menuName": "c-r-m",
+      "caption": "CRM",
+      "title": "CRM",
+      "children": [
+        {
+          "link": "i-i-s-c-r-m-employer-l",
+          "menuName": null,
+          "caption": "Employer",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-c-r-m-lead-l",
+          "menuName": null,
+          "caption": "Lead",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-c-r-m-contact-l",
+          "menuName": null,
+          "caption": "Contact",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-c-r-m-administrator-l",
+          "menuName": null,
+          "caption": "Administrator",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "i-i-s-c-r-m-activity-l",
+          "menuName": null,
+          "caption": "Activity",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

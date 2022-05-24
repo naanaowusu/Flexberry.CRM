@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Lead",
+  "name": "IISCRMLeadE",
+  "className": "LeadE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-lead",
+      "modelProjection": "LeadE"
+    }
+  ]
+}

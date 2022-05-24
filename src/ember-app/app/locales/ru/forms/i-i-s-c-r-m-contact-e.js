@@ -1,0 +1,13 @@
+export default {
+  caption: 'Contact',
+  'telephone-caption': 'Telephone',
+  'name-caption': 'Name',
+  'surname-caption': 'Surname',
+  'address-caption': 'Address',
+  'companyName-caption': 'Company name',
+  'gender-caption': 'Gender',
+  'email-caption': 'Email',
+  'role-caption': 'Role',
+  'date-caption': 'Date',
+  'administrator-caption': 'Administrator'
+};

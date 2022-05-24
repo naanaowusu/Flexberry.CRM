@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Administrator",
+  "name": "IISCRMAdministratorE",
+  "className": "AdministratorE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-c-r-m-administrator",
+      "modelProjection": "AdministratorE"
+    }
+  ]
+}

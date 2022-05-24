@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.ODataBackend", "ODataBackend/CRM.ODataBackend.csproj", "{A671350B-D38A-4D6F-A5C6-DABCB54E3795}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRM.Objects", "Objects/CRM.Objects.csproj", "{2EEC955A-33FC-4832-82AC-85E949D39C0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A671350B-D38A-4D6F-A5C6-DABCB54E3795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A671350B-D38A-4D6F-A5C6-DABCB54E3795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A671350B-D38A-4D6F-A5C6-DABCB54E3795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A671350B-D38A-4D6F-A5C6-DABCB54E3795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EEC955A-33FC-4832-82AC-85E949D39C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EEC955A-33FC-4832-82AC-85E949D39C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EEC955A-33FC-4832-82AC-85E949D39C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EEC955A-33FC-4832-82AC-85E949D39C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

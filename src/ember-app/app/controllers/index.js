@@ -22,7 +22,7 @@ export default Controller.extend({
             link: 'i-i-s-c-r-m-employer-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-employer-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-employer-l.title'),
-            icon: 'paperclip',
+            icon: 'book',
             children: null
           }, {
             link: 'i-i-s-c-r-m-lead-l',
@@ -34,19 +34,19 @@ export default Controller.extend({
             link: 'i-i-s-c-r-m-contact-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-contact-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-contact-l.title'),
-            icon: 'paperclip',
+            icon: 'tasks',
             children: null
           }, {
             link: 'i-i-s-c-r-m-administrator-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-administrator-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-administrator-l.title'),
-            icon: 'archive',
+            icon: 'chart bar',
             children: null
           }, {
             link: 'i-i-s-c-r-m-activity-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-activity-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-activity-l.title'),
-            icon: 'address card',
+            icon: 'paperclip',
             children: null
           }]
         }

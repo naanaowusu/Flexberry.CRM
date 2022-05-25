@@ -2,7 +2,7 @@
   "nameSpace": "IIS.CRM",
   "className": "tLead",
   "enumObjects": {
-    "Yes": "",
-    "No": ""
+    "Yes": "Yes",
+    "No": "No"
   }
 }

@@ -12,6 +12,7 @@ namespace IIS.CRM
 {
     using System;
     using System.Xml;
+    using ICSSoft.STORMNET;
     
     
     // *** Start programmer edit section *** (Using statements)
@@ -31,11 +32,13 @@ namespace IIS.CRM
         // *** Start programmer edit section *** (tLead.Yes CustomAttributes)
 
         // *** End programmer edit section *** (tLead.Yes CustomAttributes)
+        [Caption("Yes")]
         Yes,
         
         // *** Start programmer edit section *** (tLead.No CustomAttributes)
 
         // *** End programmer edit section *** (tLead.No CustomAttributes)
+        [Caption("No")]
         No,
     }
 }

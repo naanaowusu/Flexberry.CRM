@@ -9,8 +9,7 @@ export let Model = Mixin.create({
   activityType: DS.attr('i-i-s-c-r-m-t-activity'),
   startOfActivity: DS.attr('date'),
   endOfActivity: DS.attr('date'),
-  contact: DS.belongsTo('i-i-s-c-r-m-contact', { inverse: null, async: false }),
-  lead: DS.belongsTo('i-i-s-c-r-m-lead', { inverse: null, async: false })
+  contact: DS.belongsTo('i-i-s-c-r-m-contact', { inverse: null, async: false, polymorphic: true })
 });
 
 export let ValidationRules = {
@@ -47,13 +46,6 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
-  lead: {
-    descriptionKey: 'models.i-i-s-c-r-m-activity.validations.lead.__caption__',
-    validators: [
-      validator('ds-error'),
-      validator('presence', true),
-    ],
-  },
 };
 
 export let defineProjections = function (modelClass) {
@@ -63,11 +55,8 @@ export let defineProjections = function (modelClass) {
     startOfActivity: attr('Start of activity', { index: 2 }),
     endOfActivity: attr('End of activity', { index: 3 }),
     contact: belongsTo('i-i-s-c-r-m-contact', 'Contact', {
-      name: attr('Name', { index: 5, hidden: true })
-    }, { index: 4, displayMemberPath: 'name' }),
-    lead: belongsTo('i-i-s-c-r-m-lead', 'Lead', {
-      name: attr('Name', { index: 7, hidden: true })
-    }, { index: 6, displayMemberPath: 'name' })
+      telephone: attr('Telephone', { index: 5, hidden: true })
+    }, { index: 4, displayMemberPath: 'telephone' })
   });
 
   modelClass.defineProjection('ActivityL', 'i-i-s-c-r-m-activity', {
@@ -75,11 +64,8 @@ export let defineProjections = function (modelClass) {
     activityType: attr('Activity type', { index: 1 }),
     startOfActivity: attr('Start of activity', { index: 2 }),
     endOfActivity: attr('End of activity', { index: 3 }),
-    contact: belongsTo('i-i-s-c-r-m-contact', 'Name', {
-      name: attr('Name', { index: 4 })
-    }, { index: -1, hidden: true }),
-    lead: belongsTo('i-i-s-c-r-m-lead', 'Name', {
-      name: attr('Name', { index: 5 })
+    contact: belongsTo('i-i-s-c-r-m-contact', 'Telephone', {
+      telephone: attr('Telephone', { index: 4 })
     }, { index: -1, hidden: true })
   });
 };

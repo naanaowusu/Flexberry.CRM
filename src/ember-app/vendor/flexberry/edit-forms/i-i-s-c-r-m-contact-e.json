@@ -1,14 +1,5 @@
 ﻿{
-  "propertyLookup": [
-    {
-      "master": null,
-      "displayAttributeName": null,
-      "required": false,
-      "relationName": "Administrator",
-      "projection": "AdministratorL",
-      "detailModelName": null
-    }
-  ],
+  "propertyLookup": [],
   "external": false,
   "caption": "Contact",
   "name": "IISCRMContactE",

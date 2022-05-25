@@ -22,7 +22,23 @@ CREATE TABLE "Lead"
 
 	"primaryKey" RAW(16) NOT NULL,
 
+	"LeadOrNot" NVARCHAR2(4) NULL,
+
+	"Telephone" NVARCHAR2(255) NULL,
+
 	"Name" NVARCHAR2(255) NULL,
+
+	"Surname" NVARCHAR2(255) NULL,
+
+	"Address" NVARCHAR2(255) NULL,
+
+	"CompanyName" NVARCHAR2(255) NULL,
+
+	"Gender" NVARCHAR2(6) NULL,
+
+	"Email" NVARCHAR2(255) NULL,
+
+	"Date" DATE NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -47,11 +63,7 @@ CREATE TABLE "Contact"
 
 	"Email" NVARCHAR2(255) NULL,
 
-	"Role" NVARCHAR2(255) NULL,
-
 	"Date" DATE NULL,
-
-	"Administrator_m0" RAW(16) NOT NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -83,9 +95,9 @@ CREATE TABLE "Activity"
 
 	"EndOfActivity" DATE NULL,
 
-	"Contact_m0" RAW(16) NOT NULL,
+	"Contact_m0" RAW(16) NULL,
 
-	"Lead_m0" RAW(16) NOT NULL,
+	"Contact_m1" RAW(16) NULL,
 
 	 PRIMARY KEY ("primaryKey")
 ) ;
@@ -294,20 +306,15 @@ ALTER TABLE "Employer"
 
 CREATE INDEX "Employer_IAdministrator_m0" on "Employer" ("Administrator_m0");
 
-ALTER TABLE "Contact"
-	ADD CONSTRAINT "Contact_FAdministrator_0" FOREIGN KEY ("Administrator_m0") REFERENCES "Administrator" ("primaryKey");
-
-CREATE INDEX "Contact_IAdministrator_m0" on "Contact" ("Administrator_m0");
-
 ALTER TABLE "Activity"
 	ADD CONSTRAINT "Activity_FContact_0" FOREIGN KEY ("Contact_m0") REFERENCES "Contact" ("primaryKey");
 
 CREATE INDEX "Activity_IContact_m0" on "Activity" ("Contact_m0");
 
 ALTER TABLE "Activity"
-	ADD CONSTRAINT "Activity_FLead_0" FOREIGN KEY ("Lead_m0") REFERENCES "Lead" ("primaryKey");
+	ADD CONSTRAINT "Activity_FLead_0" FOREIGN KEY ("Contact_m1") REFERENCES "Lead" ("primaryKey");
 
-CREATE INDEX "Activity_ILead_m0" on "Activity" ("Lead_m0");
+CREATE INDEX "Activity_IContact_m1" on "Activity" ("Contact_m1");
 
 ALTER TABLE "STORMWEBSEARCH"
 	ADD CONSTRAINT "STORMWEBSEARCH_FSTORMFILT_6521" FOREIGN KEY ("FilterSetting_m0") REFERENCES "STORMFILTERSETTING" ("primaryKey");

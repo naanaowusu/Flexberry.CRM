@@ -36,12 +36,7 @@ namespace IIS.CRM
             "CompanyName as \'Company name\'",
             "Gender as \'Gender\'",
             "Email as \'Email\'",
-            "Role as \'Role\'",
-            "Date as \'Date\'",
-            "Administrator as \'Administrator\'",
-            "Administrator.Name as \'Name\'"}, Hidden=new string[] {
-            "Administrator.Name"})]
-    [MasterViewDefineAttribute("ContactE", "Administrator", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
+            "Date as \'Date\'"})]
     [View("ContactL", new string[] {
             "Telephone as \'Telephone\'",
             "Name as \'Name\'",
@@ -50,9 +45,7 @@ namespace IIS.CRM
             "CompanyName as \'Company name\'",
             "Gender as \'Gender\'",
             "Email as \'Email\'",
-            "Role as \'Role\'",
-            "Date as \'Date\'",
-            "Administrator.Name as \'Name\'"})]
+            "Date as \'Date\'"})]
     public class Contact : ICSSoft.STORMNET.DataObject
     {
         
@@ -70,11 +63,7 @@ namespace IIS.CRM
         
         private string fEmail;
         
-        private string fRole;
-        
         private System.DateTime fDate;
-        
-        private IIS.CRM.Administrator fAdministrator;
         
         // *** Start programmer edit section *** (Contact CustomMembers)
 
@@ -305,38 +294,6 @@ namespace IIS.CRM
         }
         
         /// <summary>
-        /// Role.
-        /// </summary>
-        // *** Start programmer edit section *** (Contact.Role CustomAttributes)
-
-        // *** End programmer edit section *** (Contact.Role CustomAttributes)
-        [StrLen(255)]
-        public virtual string Role
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Contact.Role Get start)
-
-                // *** End programmer edit section *** (Contact.Role Get start)
-                string result = this.fRole;
-                // *** Start programmer edit section *** (Contact.Role Get end)
-
-                // *** End programmer edit section *** (Contact.Role Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Contact.Role Set start)
-
-                // *** End programmer edit section *** (Contact.Role Set start)
-                this.fRole = value;
-                // *** Start programmer edit section *** (Contact.Role Set end)
-
-                // *** End programmer edit section *** (Contact.Role Set end)
-            }
-        }
-        
-        /// <summary>
         /// Date.
         /// </summary>
         // *** Start programmer edit section *** (Contact.Date CustomAttributes)
@@ -364,38 +321,6 @@ namespace IIS.CRM
                 // *** Start programmer edit section *** (Contact.Date Set end)
 
                 // *** End programmer edit section *** (Contact.Date Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Contact.
-        /// </summary>
-        // *** Start programmer edit section *** (Contact.Administrator CustomAttributes)
-
-        // *** End programmer edit section *** (Contact.Administrator CustomAttributes)
-        [NotNull()]
-        public virtual IIS.CRM.Administrator Administrator
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Contact.Administrator Get start)
-
-                // *** End programmer edit section *** (Contact.Administrator Get start)
-                IIS.CRM.Administrator result = this.fAdministrator;
-                // *** Start programmer edit section *** (Contact.Administrator Get end)
-
-                // *** End programmer edit section *** (Contact.Administrator Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Contact.Administrator Set start)
-
-                // *** End programmer edit section *** (Contact.Administrator Set start)
-                this.fAdministrator = value;
-                // *** Start programmer edit section *** (Contact.Administrator Set end)
-
-                // *** End programmer edit section *** (Contact.Administrator Set end)
             }
         }
         

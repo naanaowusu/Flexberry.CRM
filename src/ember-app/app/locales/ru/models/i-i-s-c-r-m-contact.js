@@ -22,11 +22,11 @@ export default {
       email: {
         __caption__: 'Email'
       },
-      role: {
-        __caption__: 'Role'
-      },
       date: {
         __caption__: 'Date'
+      },
+      role: {
+        __caption__: 'Role'
       },
       administrator: {
         __caption__: 'Administrator',
@@ -57,11 +57,11 @@ export default {
       email: {
         __caption__: 'Email'
       },
-      role: {
-        __caption__: 'Role'
-      },
       date: {
         __caption__: 'Date'
+      },
+      role: {
+        __caption__: 'Role'
       },
       administrator: {
         __caption__: 'Name',
@@ -93,11 +93,11 @@ export default {
     email: {
       __caption__: 'Email'
     },
-    role: {
-      __caption__: 'Role'
-    },
     date: {
       __caption__: 'Date'
+    },
+    role: {
+      __caption__: 'Role'
     },
     administrator: {
       __caption__: 'Administrator'

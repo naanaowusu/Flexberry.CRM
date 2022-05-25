@@ -28,31 +28,31 @@ export default Controller.extend({
             link: 'i-i-s-c-r-m-employer-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-employer-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-employer-l.title'),
-            icon: 'folder open',
+            icon: 'chart line',
             children: null
           }, {
             link: 'i-i-s-c-r-m-lead-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-lead-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-lead-l.title'),
-            icon: 'building',
+            icon: 'archive',
             children: null
           }, {
             link: 'i-i-s-c-r-m-contact-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-contact-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-contact-l.title'),
-            icon: 'archive',
+            icon: 'chart line',
             children: null
           }, {
             link: 'i-i-s-c-r-m-administrator-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-administrator-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-administrator-l.title'),
-            icon: 'chart line',
+            icon: 'folder',
             children: null
           }, {
             link: 'i-i-s-c-r-m-activity-l',
             caption: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-activity-l.caption'),
             title: i18n.t('forms.application.sitemap.c-r-m.i-i-s-c-r-m-activity-l.title'),
-            icon: 'archive',
+            icon: 'book',
             children: null
           }]
         }

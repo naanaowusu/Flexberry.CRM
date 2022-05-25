@@ -7,7 +7,7 @@ export default {
   'companyName-caption': 'Company name',
   'gender-caption': 'Gender',
   'email-caption': 'Email',
-  'role-caption': 'Role',
   'date-caption': 'Date',
+  'role-caption': 'Role',
   'administrator-caption': 'Administrator'
 };

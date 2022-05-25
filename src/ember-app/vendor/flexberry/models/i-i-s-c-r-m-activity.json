@@ -45,17 +45,10 @@
   ],
   "belongsTo": [
     {
-      "polymorphic": false,
+      "polymorphic": true,
       "presence": true,
       "name": "contact",
       "relatedTo": "i-i-s-c-r-m-contact",
-      "inverse": null
-    },
-    {
-      "polymorphic": false,
-      "presence": true,
-      "name": "lead",
-      "relatedTo": "i-i-s-c-r-m-lead",
       "inverse": null
     }
   ],
@@ -92,15 +85,15 @@
       ],
       "belongsTo": [
         {
-          "lookupValue": "Name",
-          "lookupValueField": "name",
+          "lookupValue": "Telephone",
+          "lookupValueField": "telephone",
           "relationName": "Contact",
           "belongsTo": [],
           "hidden": false,
           "attrs": [
             {
-              "name": "name",
-              "caption": "Name",
+              "name": "telephone",
+              "caption": "Telephone",
               "hidden": true,
               "index": 5
             }
@@ -110,27 +103,6 @@
           "caption": "Contact",
           "name": "contact",
           "relatedTo": "i-i-s-c-r-m-contact",
-          "inverse": null
-        },
-        {
-          "lookupValue": "Name",
-          "lookupValueField": "name",
-          "relationName": "Lead",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "name",
-              "caption": "Name",
-              "hidden": true,
-              "index": 7
-            }
-          ],
-          "index": 6,
-          "type": "standard",
-          "caption": "Lead",
-          "name": "lead",
-          "relatedTo": "i-i-s-c-r-m-lead",
           "inverse": null
         }
       ],
@@ -174,38 +146,17 @@
           "hidden": false,
           "attrs": [
             {
-              "name": "name",
-              "caption": "Name",
+              "name": "telephone",
+              "caption": "Telephone",
               "hidden": false,
               "index": 4
             }
           ],
           "index": -1,
           "type": "default",
-          "caption": "Name",
+          "caption": "Telephone",
           "name": "contact",
           "relatedTo": "i-i-s-c-r-m-contact",
-          "inverse": null
-        },
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "Lead",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "name",
-              "caption": "Name",
-              "hidden": false,
-              "index": 5
-            }
-          ],
-          "index": -1,
-          "type": "default",
-          "caption": "Name",
-          "name": "lead",
-          "relatedTo": "i-i-s-c-r-m-lead",
           "inverse": null
         }
       ],

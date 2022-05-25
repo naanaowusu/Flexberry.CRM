@@ -72,7 +72,7 @@
       choose="showLookupDialog"
       remove="removeLookupValue"
       value=model.contact
-      displayAttributeName="name"
+      displayAttributeName="telephone"
       autocomplete=true
       relationName="contact"
       projection="ContactL"
@@ -83,23 +83,5 @@
       data-test-i-i-s-c-r-m-activity-e-contact=true
     }}
     {{flexberry-validationmessage error=(v-get validationModel "contact" "message")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-c-r-m-activity-e.lead-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.lead
-      displayAttributeName="name"
-      autocomplete=true
-      relationName="lead"
-      projection="LeadL"
-      title=(t "forms.i-i-s-c-r-m-activity-e.lead-caption")
-      readonly=readonly
-      componentName="leadLookup"
-      class=(if (v-get validationModel "lead" "isInvalid") "error")
-      data-test-i-i-s-c-r-m-activity-e-lead=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationModel "lead" "message")}}
   </div>
 </form>

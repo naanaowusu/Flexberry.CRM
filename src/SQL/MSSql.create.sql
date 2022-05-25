@@ -19,7 +19,23 @@ CREATE TABLE [Lead] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
+	 [LeadOrNot] VARCHAR(4)  NULL,
+
+	 [Telephone] VARCHAR(255)  NULL,
+
 	 [Name] VARCHAR(255)  NULL,
+
+	 [Surname] VARCHAR(255)  NULL,
+
+	 [Address] VARCHAR(255)  NULL,
+
+	 [CompanyName] VARCHAR(255)  NULL,
+
+	 [Gender] VARCHAR(6)  NULL,
+
+	 [Email] VARCHAR(255)  NULL,
+
+	 [Date] DATETIME  NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -42,11 +58,7 @@ CREATE TABLE [Contact] (
 
 	 [Email] VARCHAR(255)  NULL,
 
-	 [Role] VARCHAR(255)  NULL,
-
 	 [Date] DATETIME  NULL,
-
-	 [Administrator_m0] UNIQUEIDENTIFIER  NOT NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -74,9 +86,9 @@ CREATE TABLE [Activity] (
 
 	 [EndOfActivity] DATETIME  NULL,
 
-	 [Contact_m0] UNIQUEIDENTIFIER  NOT NULL,
+	 [Contact_m0] UNIQUEIDENTIFIER  NULL,
 
-	 [Lead_m0] UNIQUEIDENTIFIER  NOT NULL,
+	 [Contact_m1] UNIQUEIDENTIFIER  NULL,
 
 	 PRIMARY KEY ([primaryKey]))
 
@@ -265,14 +277,11 @@ CREATE TABLE [ApplicationLog] (
  ALTER TABLE [Employer] ADD CONSTRAINT [Employer_FAdministrator_0] FOREIGN KEY ([Administrator_m0]) REFERENCES [Administrator]
 CREATE INDEX Employer_IAdministrator_m0 on [Employer] ([Administrator_m0])
 
- ALTER TABLE [Contact] ADD CONSTRAINT [Contact_FAdministrator_0] FOREIGN KEY ([Administrator_m0]) REFERENCES [Administrator]
-CREATE INDEX Contact_IAdministrator_m0 on [Contact] ([Administrator_m0])
-
  ALTER TABLE [Activity] ADD CONSTRAINT [Activity_FContact_0] FOREIGN KEY ([Contact_m0]) REFERENCES [Contact]
 CREATE INDEX Activity_IContact_m0 on [Activity] ([Contact_m0])
 
- ALTER TABLE [Activity] ADD CONSTRAINT [Activity_FLead_0] FOREIGN KEY ([Lead_m0]) REFERENCES [Lead]
-CREATE INDEX Activity_ILead_m0 on [Activity] ([Lead_m0])
+ ALTER TABLE [Activity] ADD CONSTRAINT [Activity_FLead_0] FOREIGN KEY ([Contact_m1]) REFERENCES [Lead]
+CREATE INDEX Activity_IContact_m1 on [Activity] ([Contact_m1])
 
  ALTER TABLE [STORMWEBSEARCH] ADD CONSTRAINT [STORMWEBSEARCH_FSTORMFILTERSETTING_0] FOREIGN KEY ([FilterSetting_m0]) REFERENCES [STORMFILTERSETTING]
 

@@ -15,6 +15,9 @@ export default {
       },
       contact: {
         __caption__: 'Contact',
+        telephone: {
+          __caption__: 'Telephone'
+        },
         name: {
           __caption__: 'Name'
         }
@@ -41,6 +44,9 @@ export default {
       },
       contact: {
         __caption__: 'Name',
+        telephone: {
+          __caption__: 'Telephone'
+        },
         name: {
           __caption__: 'Name'
         }

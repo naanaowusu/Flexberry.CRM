@@ -7,14 +7,6 @@
       "relationName": "Contact",
       "projection": "ContactL",
       "detailModelName": null
-    },
-    {
-      "master": null,
-      "displayAttributeName": null,
-      "required": false,
-      "relationName": "Lead",
-      "projection": "LeadL",
-      "detailModelName": null
     }
   ],
   "external": false,

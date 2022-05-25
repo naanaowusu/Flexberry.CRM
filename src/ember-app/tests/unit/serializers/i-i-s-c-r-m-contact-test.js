@@ -11,6 +11,7 @@ moduleForModel('i-i-s-c-r-m-contact', 'Unit | Serializer | i-i-s-c-r-m-contact',
 
     'transform:i-i-s-c-r-m-t-activity',
     'transform:i-i-s-c-r-m-t-gender',
+    'transform:i-i-s-c-r-m-t-lead',
 
     'model:i-i-s-c-r-m-activity',
     'model:i-i-s-c-r-m-administrator',

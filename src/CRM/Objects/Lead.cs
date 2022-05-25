@@ -29,13 +29,29 @@ namespace IIS.CRM
     [AutoAltered()]
     [AccessType(ICSSoft.STORMNET.AccessType.none)]
     [View("LeadE", new string[] {
-            "Name as \'Name\'"})]
+            "LeadOrNot as \'Lead or not\'",
+            "Telephone as \'Telephone\'",
+            "Name as \'Name\'",
+            "Surname as \'Surname\'",
+            "Address as \'Address\'",
+            "CompanyName as \'Company name\'",
+            "Gender as \'Gender\'",
+            "Email as \'Email\'",
+            "Date as \'Date\'"})]
     [View("LeadL", new string[] {
-            "Name as \'Name\'"})]
-    public class Lead : ICSSoft.STORMNET.DataObject
+            "LeadOrNot as \'Lead or not\'",
+            "Telephone as \'Telephone\'",
+            "Name as \'Name\'",
+            "Surname as \'Surname\'",
+            "Address as \'Address\'",
+            "CompanyName as \'Company name\'",
+            "Gender as \'Gender\'",
+            "Email as \'Email\'",
+            "Date as \'Date\'"})]
+    public class Lead : IIS.CRM.Contact
     {
         
-        private string fName;
+        private IIS.CRM.tLead fLeadOrNot;
         
         // *** Start programmer edit section *** (Lead CustomMembers)
 
@@ -43,34 +59,33 @@ namespace IIS.CRM
 
         
         /// <summary>
-        /// Name.
+        /// LeadOrNot.
         /// </summary>
-        // *** Start programmer edit section *** (Lead.Name CustomAttributes)
+        // *** Start programmer edit section *** (Lead.LeadOrNot CustomAttributes)
 
-        // *** End programmer edit section *** (Lead.Name CustomAttributes)
-        [StrLen(255)]
-        public virtual string Name
+        // *** End programmer edit section *** (Lead.LeadOrNot CustomAttributes)
+        public virtual IIS.CRM.tLead LeadOrNot
         {
             get
             {
-                // *** Start programmer edit section *** (Lead.Name Get start)
+                // *** Start programmer edit section *** (Lead.LeadOrNot Get start)
 
-                // *** End programmer edit section *** (Lead.Name Get start)
-                string result = this.fName;
-                // *** Start programmer edit section *** (Lead.Name Get end)
+                // *** End programmer edit section *** (Lead.LeadOrNot Get start)
+                IIS.CRM.tLead result = this.fLeadOrNot;
+                // *** Start programmer edit section *** (Lead.LeadOrNot Get end)
 
-                // *** End programmer edit section *** (Lead.Name Get end)
+                // *** End programmer edit section *** (Lead.LeadOrNot Get end)
                 return result;
             }
             set
             {
-                // *** Start programmer edit section *** (Lead.Name Set start)
+                // *** Start programmer edit section *** (Lead.LeadOrNot Set start)
 
-                // *** End programmer edit section *** (Lead.Name Set start)
-                this.fName = value;
-                // *** Start programmer edit section *** (Lead.Name Set end)
+                // *** End programmer edit section *** (Lead.LeadOrNot Set start)
+                this.fLeadOrNot = value;
+                // *** Start programmer edit section *** (Lead.LeadOrNot Set end)
 
-                // *** End programmer edit section *** (Lead.Name Set end)
+                // *** End programmer edit section *** (Lead.LeadOrNot Set end)
             }
         }
         

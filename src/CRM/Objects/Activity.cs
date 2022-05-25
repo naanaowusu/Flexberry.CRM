@@ -34,20 +34,15 @@ namespace IIS.CRM
             "StartOfActivity as \'Start of activity\'",
             "EndOfActivity as \'End of activity\'",
             "Contact as \'Contact\'",
-            "Contact.Name as \'Name\'",
-            "Lead as \'Lead\'",
-            "Lead.Name as \'Name\'"}, Hidden=new string[] {
-            "Contact.Name",
-            "Lead.Name"})]
-    [MasterViewDefineAttribute("ActivityE", "Contact", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
-    [MasterViewDefineAttribute("ActivityE", "Lead", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Name")]
+            "Contact.Telephone as \'Telephone\'"}, Hidden=new string[] {
+            "Contact.Telephone"})]
+    [MasterViewDefineAttribute("ActivityE", "Contact", ICSSoft.STORMNET.LookupTypeEnum.Standard, "", "Telephone")]
     [View("ActivityL", new string[] {
             "ActivityName as \'Activity name\'",
             "ActivityType as \'Activity type\'",
             "StartOfActivity as \'Start of activity\'",
             "EndOfActivity as \'End of activity\'",
-            "Contact.Name as \'Name\'",
-            "Lead.Name as \'Name\'"})]
+            "Contact.Telephone as \'Telephone\'"})]
     public class Activity : ICSSoft.STORMNET.DataObject
     {
         
@@ -60,8 +55,6 @@ namespace IIS.CRM
         private System.DateTime fEndOfActivity;
         
         private IIS.CRM.Contact fContact;
-        
-        private IIS.CRM.Lead fLead;
         
         // *** Start programmer edit section *** (Activity CustomMembers)
 
@@ -199,6 +192,9 @@ namespace IIS.CRM
         // *** Start programmer edit section *** (Activity.Contact CustomAttributes)
 
         // *** End programmer edit section *** (Activity.Contact CustomAttributes)
+        [TypeUsage(new string[] {
+                "IIS.CRM.Contact",
+                "IIS.CRM.Lead"})]
         [NotNull()]
         public virtual IIS.CRM.Contact Contact
         {
@@ -222,38 +218,6 @@ namespace IIS.CRM
                 // *** Start programmer edit section *** (Activity.Contact Set end)
 
                 // *** End programmer edit section *** (Activity.Contact Set end)
-            }
-        }
-        
-        /// <summary>
-        /// Activity.
-        /// </summary>
-        // *** Start programmer edit section *** (Activity.Lead CustomAttributes)
-
-        // *** End programmer edit section *** (Activity.Lead CustomAttributes)
-        [NotNull()]
-        public virtual IIS.CRM.Lead Lead
-        {
-            get
-            {
-                // *** Start programmer edit section *** (Activity.Lead Get start)
-
-                // *** End programmer edit section *** (Activity.Lead Get start)
-                IIS.CRM.Lead result = this.fLead;
-                // *** Start programmer edit section *** (Activity.Lead Get end)
-
-                // *** End programmer edit section *** (Activity.Lead Get end)
-                return result;
-            }
-            set
-            {
-                // *** Start programmer edit section *** (Activity.Lead Set start)
-
-                // *** End programmer edit section *** (Activity.Lead Set start)
-                this.fLead = value;
-                // *** Start programmer edit section *** (Activity.Lead Set end)
-
-                // *** End programmer edit section *** (Activity.Lead Set end)
             }
         }
         

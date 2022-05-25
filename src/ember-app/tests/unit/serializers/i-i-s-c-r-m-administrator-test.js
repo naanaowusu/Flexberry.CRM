@@ -11,6 +11,7 @@ moduleForModel('i-i-s-c-r-m-administrator', 'Unit | Serializer | i-i-s-c-r-m-adm
 
     'transform:i-i-s-c-r-m-t-activity',
     'transform:i-i-s-c-r-m-t-gender',
+    'transform:i-i-s-c-r-m-t-lead',
 
     'model:i-i-s-c-r-m-activity',
     'model:i-i-s-c-r-m-administrator',

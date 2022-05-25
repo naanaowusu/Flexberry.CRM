@@ -12,9 +12,7 @@ export let Model = Mixin.create({
   companyName: DS.attr('string'),
   gender: DS.attr('i-i-s-c-r-m-t-gender'),
   email: DS.attr('string'),
-  role: DS.attr('string'),
-  date: DS.attr('date'),
-  administrator: DS.belongsTo('i-i-s-c-r-m-administrator', { inverse: null, async: false })
+  date: DS.attr('date')
 });
 
 export let ValidationRules = {
@@ -60,24 +58,11 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  role: {
-    descriptionKey: 'models.i-i-s-c-r-m-contact.validations.role.__caption__',
-    validators: [
-      validator('ds-error'),
-    ],
-  },
   date: {
     descriptionKey: 'models.i-i-s-c-r-m-contact.validations.date.__caption__',
     validators: [
       validator('ds-error'),
       validator('date'),
-    ],
-  },
-  administrator: {
-    descriptionKey: 'models.i-i-s-c-r-m-contact.validations.administrator.__caption__',
-    validators: [
-      validator('ds-error'),
-      validator('presence', true),
     ],
   },
 };
@@ -91,11 +76,7 @@ export let defineProjections = function (modelClass) {
     companyName: attr('Company name', { index: 4 }),
     gender: attr('Gender', { index: 5 }),
     email: attr('Email', { index: 6 }),
-    role: attr('Role', { index: 7 }),
-    date: attr('Date', { index: 8 }),
-    administrator: belongsTo('i-i-s-c-r-m-administrator', 'Administrator', {
-      name: attr('Name', { index: 10, hidden: true })
-    }, { index: 9, displayMemberPath: 'name' })
+    date: attr('Date', { index: 7 })
   });
 
   modelClass.defineProjection('ContactL', 'i-i-s-c-r-m-contact', {
@@ -106,10 +87,6 @@ export let defineProjections = function (modelClass) {
     companyName: attr('Company name', { index: 4 }),
     gender: attr('Gender', { index: 5 }),
     email: attr('Email', { index: 6 }),
-    role: attr('Role', { index: 7 }),
-    date: attr('Date', { index: 8 }),
-    administrator: belongsTo('i-i-s-c-r-m-administrator', 'Name', {
-      name: attr('Name', { index: 9 })
-    }, { index: -1, hidden: true })
+    date: attr('Date', { index: 7 })
   });
 };

@@ -28,7 +28,7 @@ CREATE TABLE [Contact] (
 
 	 [primaryKey] UNIQUEIDENTIFIER  NOT NULL,
 
-	 [Telephone] INT  NULL,
+	 [Telephone] VARCHAR(255)  NULL,
 
 	 [Name] VARCHAR(255)  NULL,
 

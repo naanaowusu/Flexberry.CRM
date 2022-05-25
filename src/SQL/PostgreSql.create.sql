@@ -19,7 +19,7 @@ CREATE TABLE Lead (
 
 CREATE TABLE Contact (
  primaryKey UUID NOT NULL,
- Telephone INT NULL,
+ Telephone VARCHAR(255) NULL,
  Name VARCHAR(255) NULL,
  Surname VARCHAR(255) NULL,
  Address VARCHAR(255) NULL,

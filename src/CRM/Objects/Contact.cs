@@ -56,7 +56,7 @@ namespace IIS.CRM
     public class Contact : ICSSoft.STORMNET.DataObject
     {
         
-        private int fTelephone;
+        private string fTelephone;
         
         private string fName;
         
@@ -87,14 +87,15 @@ namespace IIS.CRM
         // *** Start programmer edit section *** (Contact.Telephone CustomAttributes)
 
         // *** End programmer edit section *** (Contact.Telephone CustomAttributes)
-        public virtual int Telephone
+        [StrLen(255)]
+        public virtual string Telephone
         {
             get
             {
                 // *** Start programmer edit section *** (Contact.Telephone Get start)
 
                 // *** End programmer edit section *** (Contact.Telephone Get start)
-                int result = this.fTelephone;
+                string result = this.fTelephone;
                 // *** Start programmer edit section *** (Contact.Telephone Get end)
 
                 // *** End programmer edit section *** (Contact.Telephone Get end)

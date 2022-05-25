@@ -8,8 +8,8 @@
   "attrs": [
     {
       "name": "telephone",
-      "type": "number",
-      "flexberryType": "int",
+      "type": "string",
+      "flexberryType": "string",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

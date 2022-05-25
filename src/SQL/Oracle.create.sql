@@ -33,7 +33,7 @@ CREATE TABLE "Contact"
 
 	"primaryKey" RAW(16) NOT NULL,
 
-	"Telephone" NUMBER(10) NULL,
+	"Telephone" NVARCHAR2(255) NULL,
 
 	"Name" NVARCHAR2(255) NULL,
 
